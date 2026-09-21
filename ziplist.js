@@ -1,5 +1,5 @@
 "use strict";
-function ziplist(list1, list2) {
+function zipList(list1, list2) {
     const bigList = [];
     if (list1.length !== list2.length) {
         return 'Error: Lists must be of the same length';
@@ -16,5 +16,5 @@ function zipListTheFunctionalWay(list1, list2) {
     }
     return list1.map((item, i) => [item, list2[i]]).reduce((result, pair) => result.concat(pair), []);
 }
-console.log(ziplist([1, 2, 3], ['a', 'b', 'c']));
+console.log(zipList([1, 2, 3], ['a', 'b', 'c']));
 console.log(zipListTheFunctionalWay([1, 2, 3], ['a', 'b', 'c']));
